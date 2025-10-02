@@ -1,0 +1,34 @@
+Day 1 ---
+// Day 1 Simulation - Blink LED
+int ledPin = 13;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(ledPin, HIGH); // LED on
+  delay(1000);               // wait 1 sec
+  digitalWrite(ledPin, LOW);  // LED off
+  delay(1000);
+}
+
+Day 2 --- 
+// Day 2 - Button controls LED
+int ledPin = 13;
+int buttonPin = 2;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+  pinMode(buttonPin, INPUT);
+}
+
+void loop() {
+  int buttonState = digitalRead(buttonPin);
+
+  if (buttonState == HIGH) {
+    digitalWrite(ledPin, HIGH);   // LED ON if button pressed
+  } else {
+    digitalWrite(ledPin, LOW);    // LED OFF otherwise
+  }
+}
